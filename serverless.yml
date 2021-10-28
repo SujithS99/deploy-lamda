@@ -17,8 +17,9 @@ provider:
   deploymentPrefix: git-lambda-test-DEV
 
 functions:
-  app:
-    handler: src/index.handler
-     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+  api:
+    handler: index.execute
+    events:
+     - http:
+         path: /{proxy+}
+         method: ANY
