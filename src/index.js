@@ -3,10 +3,10 @@ const app = express();
 const serverless = require('serverless-http');
 require('dotenv').config();
 
-app.get('/abc', (req, res) => {
+app.get('/test', (req, res) => {
   res.send('sucess github-lambda-deployment');
 })
-app.get('*', (req, res) => {
+app.get('/any', (req, res) => {
   res.send('any github-lambda-deployment');
 })
 module.exports.execute = serverless(app);
