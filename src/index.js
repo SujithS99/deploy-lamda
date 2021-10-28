@@ -9,6 +9,10 @@ app.get('/test', (req, res) => {
 app.get('/any', (req, res) => {
   res.send('any github-lambda-deployment');
 })
+
+app.get('/error', (req, res) => {
+  res.send('any github-lambda-deployment');
+})
 module.exports.execute = serverless(app);
 
 
