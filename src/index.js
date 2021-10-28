@@ -7,7 +7,7 @@ app.get('/abc', (req, res) => {
   res.send('sucess github-lambda-deployment');
 })
 
-module.exports.handler = serverless(app);
+module.exports.execute = serverless(app);
 
 app.listen(process.env.PORT || 3000);
 console.log('app running on port : 3000');
