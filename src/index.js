@@ -6,7 +6,9 @@ require('dotenv').config();
 app.get('/abc', (req, res) => {
   res.send('sucess github-lambda-deployment');
 })
-
+app.get('*', (req, res) => {
+  res.send('any github-lambda-deployment');
+})
 module.exports.execute = serverless(app);
 
 
