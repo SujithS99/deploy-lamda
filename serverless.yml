@@ -18,7 +18,7 @@ provider:
 
 functions:
   api:
-    handler: index.execute
+    handler: src/index.execute
     events:
      - http:
          path: /{proxy+}
